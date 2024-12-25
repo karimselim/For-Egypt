@@ -4,6 +4,7 @@ import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import menu_icon from "../../assets/menu-icon.png";
 import { Link } from "react-scroll";
+import Image from "next/image";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -21,8 +22,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-      <h2>من أجل مصر</h2>
+    <nav className={` ${sticky ? "dark-nav" : ""}`}>
+      <Link to="hero" smooth={true} offset={0} duration={500}>
+        <h2 className="text-3xl">من أجل مصر</h2>
+      </Link>
       <ul className={mobbileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <Link to="hero" smooth={true} offset={0} duration={500}>
@@ -61,7 +64,12 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} />
+      <Image
+        src={menu_icon}
+        alt=""
+        className="menu-icon"
+        onClick={toggleMenu}
+      />
     </nav>
   );
 };

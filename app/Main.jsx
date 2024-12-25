@@ -19,7 +19,7 @@ const Main = () => {
     <div>
       <Navbar />
       <Hero />
-      <div className="container">
+      <div className="">
         <Title subTitle="Our PROGRAMS" title="What We Offer" />
         <Programs />
         <About setPlayState={setPlayState} />
