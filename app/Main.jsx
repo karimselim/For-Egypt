@@ -20,7 +20,7 @@ const Main = () => {
       <Navbar />
       <Hero />
       <div className="">
-        <Title subTitle="Our PROGRAMS" title="What We Offer" />
+        <Title subTitle="خدماتنا" title="ماذا نقدم؟" />
         <Programs />
         <About setPlayState={setPlayState} />
         <Title subTitle="Gallery" title="Campus Photos" />

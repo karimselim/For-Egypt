@@ -11,29 +11,29 @@ import Image from "next/image";
 
 const Programs = () => {
   return (
-    <div className="programs">
+    <section className="programs mx-[7%] my-20">
       <div className="program">
         <Image src={program_1} alt=""></Image>
         <div className="caption">
           <Image src={program_icon_1} alt="" />
-          <p>Graduation Degree</p>
+          <p>كورسات و تدريبات</p>
         </div>
       </div>
       <div className="program">
         <Image src={program_2} alt=""></Image>
         <div className="caption">
           <Image src={program_icon_2} alt="" />
-          <p>Master Degree</p>
+          <p>خصومات حصرية</p>
         </div>
       </div>
       <div className="program">
         <Image src={program_3} alt=""></Image>
         <div className="caption">
           <Image src={program_icon_3} alt="" />
-          <p>Post Graduation</p>
+          <p>فعاليات متنوعة</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

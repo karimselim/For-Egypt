@@ -27,7 +27,7 @@ const Navbar = () => {
         <h2 className="text-3xl">من أجل مصر</h2>
       </Link>
       <ul className={mobbileMenu ? "" : "hide-mobile-menu"}>
-        <li className="text-xl hover:text-black transition-colors duration-300">
+        <li className="text-xl hover:text-black transition-colors duration-300 max-lg:hidden">
           <Link to="hero" smooth={true} offset={0} duration={500}>
             الصفحة الرئيسية
           </Link>
