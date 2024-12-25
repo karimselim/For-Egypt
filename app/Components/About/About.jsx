@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const About = ({ setPlayState }) => {
   return (
-    <div className="about">
-      <div className="about-left">
+    <section className="about mx-[7%] my-24">
+      <aside className="about-left">
         <Image src={about_img} alt="" className="about-img" />
         <Image
           src={play_icon}
@@ -18,29 +18,28 @@ const About = ({ setPlayState }) => {
             setPlayState(true);
           }}
         />
-      </div>
-      <div className="about-right">
-        <h3>ABOUT UNIVERSITY</h3>
-        <h2>Nurturing Tomorrow's Leaders Today</h2>
+      </aside>
+      <aside className="about-right">
+        <h2>من نحن؟</h2>
+        <h2>أسرة طلاب من أجل مصر</h2>
         <p>
-          Embark on a transformative educational journey with our university's
-          comprehensive education programs. Our cutting-edge curriculam is
-          designed to empower students with the knowledge, skills ans
-          experiences needed to excel in the dynamic field of education
+          أسرة طلاب من أجل مصر هي كيان طلابي يهدف إلى تعزيز القيم الوطنية وتنمية
+          روح الانتماء لدى الشباب الجامعي. تسعى الأسرة إلى بناء جيل واعٍ قادر
+          على مواجهة تحديات المستقبل، من خلال تنظيم فعاليات وأنشطة متنوعة تُشجع
+          على الابتكار والعمل الجماعي. تعمل الأسرة على توفير بيئة إيجابية للطلاب
+          تمكنهم من تطوير مهاراتهم الشخصية والأكاديمية، وتغرس فيهم مبادئ القيادة
+          وخدمة المجتمع.
         </p>
         <p>
-          With a focus of innovation, hands-on learning, and personalized
-          mentorship, our programs prepare aspiring educators to make a
-          meaningful impact in classroom, schools and communities
+          تركز أسرة طلاب من أجل مصر على تعزيز التعاون بين الطلاب من مختلف
+          التخصصات، مع توفير منصات للحوار وتبادل الأفكار. من خلال مبادراتها
+          المتنوعة، تسعى الأسرة إلى دعم الطلاب في تحقيق طموحاتهم الأكاديمية
+          والمهنية، والمساهمة في تطوير المجتمع ككل. كما تحرص الأسرة على نشر
+          الوعي الثقافي والاجتماعي بين الطلاب، مما يجعلها نموذجًا للأنشطة
+          الطلابية المتميزة داخل الجامعات المصرية.
         </p>
-        <p>
-          Whether you aspire to become a teacher, administrator, counselor, or
-          educational leader, our diverse range of programs offers th eperfect
-          pathway to achieve your goals and unlock your full potential in
-          shaping the future of education.
-        </p>
-      </div>
-    </div>
+      </aside>
+    </section>
   );
 };
 
