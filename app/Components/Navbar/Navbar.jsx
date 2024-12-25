@@ -44,7 +44,7 @@ const Navbar = () => {
         </li>
         <li className="text-xl hover:text-black transition-colors duration-300">
           <Link to="campus" smooth={true} offset={-260} duration={500}>
-            مكتبة الصور
+            ذكرياتنا
           </Link>
         </li>
         <li className="text-xl hover:text-black transition-colors duration-300">

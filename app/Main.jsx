@@ -23,7 +23,7 @@ const Main = () => {
         <Title subTitle="خدماتنا" title="ماذا نقدم؟" />
         <Programs />
         <About setPlayState={setPlayState} />
-        <Title subTitle="Gallery" title="Campus Photos" />
+        <Title subTitle="ذكرياتنا" title="مكتبة الصور" />
         <Campus />
         <Title subTitle="Testimonials" title="What Student Says" />
         <Testimonials />
