@@ -27,7 +27,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="testimonials">
+    <section className="testimonials mx-[7%] py-20">
       <Image
         src={next_icon}
         alt=""
@@ -45,24 +45,25 @@ const Testimonials = () => {
           <li>
             <div className="slide">
               <div className="user-info">
-                <Image src={user_1} alt="" />
+                <Image src={user_2} alt="" />
                 <div>
-                  <h3>William Jackson</h3>
-                  <span>Edusity, USA</span>
+                  <h3>مراد حافظ</h3>
+                  <span>رئيس اتحاد طلاب جامعة بورسعيد</span>
                 </div>
               </div>
               <p>
-                Choosing to pursue my degree at Edusity was one of the best
-                decisions I have ever made. The supportive community,
-                state-of-the-art facilities, and comitment to academic
-                excellence have truly exceeded my expectations.
+                آراء طلابنا تعكس تجربتهم الفريدة مع أنشطتنا وفعالياتنا، حيث نسعى
+                دائمًا لتقديم بيئة تعليمية واجتماعية متكاملة. يشاركنا الطلاب
+                أفكارهم وانطباعاتهم بصدق، مما يساعدنا على تحسين خدماتنا وتلبية
+                احتياجاتهم. نؤمن أن نجاحنا يقاس برضا طلابنا وإلهامهم لتحقيق
+                طموحاتهم.
               </p>
             </div>
           </li>
           <li>
             <div className="slide">
               <div className="user-info">
-                <Image src={user_2} alt="" />
+                <Image src={user_1} alt="" />
                 <div>
                   <h3>William Jackson</h3>
                   <span>Edusity, USA</span>
@@ -112,7 +113,7 @@ const Testimonials = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

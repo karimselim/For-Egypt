@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Campus = () => {
   return (
-    <div className="campus">
+    <div className="campus mx-[7%] py-20">
       <div className="gallery">
         <Image src={gallery_1} alt="" />
         <Image src={gallery_2} alt="" />
