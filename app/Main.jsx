@@ -25,9 +25,9 @@ const Main = () => {
         <About setPlayState={setPlayState} />
         <Title subTitle="ذكرياتنا" title="مكتبة الصور" />
         <Campus />
-        <Title subTitle="Testimonials" title="What Student Says" />
+        <Title subTitle="آراء طلابنا" title="كلمات من القلب" />
         <Testimonials />
-        <Title subTitle="Contact Us" title="Get in Touch" />
+        <Title subTitle="انضم الينا الآن" title="فرصتك لتصنع النجاح" />
         <Contact />
         <Footer />
       </div>

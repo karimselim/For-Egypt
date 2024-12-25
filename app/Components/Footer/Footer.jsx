@@ -1,17 +1,17 @@
 // eslint-disable-next-line
-import React from 'react'
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className='footer'>
-        <p>© 2024 Edusity. All rights reserved.</p>
-        <ul>
-            <li>Terms of Setrvices</li>
-            <li>Privacy Policy</li>
-        </ul>
-    </div>
-  ) 
-}
+    <footer className="footer px-[7%] py-4">
+      <p>© 2024 Edusity. All rights reserved.</p>
+      <ul>
+        <li>Terms of Setrvices</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

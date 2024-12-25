@@ -35,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
+    <div className="contact px-[7%] py-20">
       <div className="contact-col">
         <h3>
           Send us a message <Image src={msg_icon} alt="" />
