@@ -3,6 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import Button from "@/app/UI/Button";
 import { CiMenuFries } from "react-icons/ci";
+import Image from "next/image";
+import forEgypt from "../../assets/forEgyptlogo.png";
+import uni from "../../assets/uniLogo.png";
 
 const Navbar = () => {
   const sideBarRef = useRef(null);
@@ -52,7 +55,15 @@ const Navbar = () => {
       }`}
     >
       <Link to="hero" smooth={true} offset={0} duration={500}>
-        <h2 className="text-3xl">من أجل مصر</h2>
+        <h2 className="text-3xl flex gap-2 max-sm:text-2xl">
+          <Image
+            src={forEgypt}
+            alt=""
+            className="w-8 max-sm:w-6 object-contain"
+          />
+          <Image src={uni} alt="" className="w-8 max-sm:w-6 object-contain" />
+          طلاب من أجل مصر
+        </h2>
       </Link>
       <ul
         className={`max-md:fixed max-md:top-0 max-md:right-0 max-md:bottom-0 max-md:bg-main max-md:w-[200px] max-md:pt-[70px] max-md:duration-300 ${
