@@ -1,20 +1,26 @@
 // eslint-disable-next-line
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
-import { CiMenuFries } from "react-icons/ci";
 import Button from "@/app/UI/Button";
+import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
-  const menuRef = useRef(null);
+  const sideBarRef = useRef(null);
+  const menuIconRef = useRef(null);
 
-  const [mobbileMenu, setMobileMenu] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   const toggleMenu = () => {
-    mobbileMenu ? setMobileMenu(false) : setMobileMenu(true);
+    setMobileMenu((prev) => !prev);
   };
 
   const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (
+      sideBarRef.current &&
+      !sideBarRef.current.contains(event.target) &&
+      menuIconRef.current &&
+      !menuIconRef.current.contains(event.target)
+    ) {
       setMobileMenu(false);
     }
   };
@@ -29,9 +35,14 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY > 50 ? setSticky(true) : setSticky(false);
-    });
+    const handleScroll = () => {
+      setSticky(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -44,10 +55,10 @@ const Navbar = () => {
         <h2 className="text-3xl">من أجل مصر</h2>
       </Link>
       <ul
-        ref={menuRef}
-        className={`max-md:fixed max-md:top-0 max-md:right-0 max-md:bottom-0 max-md:bg-main max-md:-z-10 max-md:w-[200px] max-md:pt-[70px] max-md:duration-75 ${
-          mobbileMenu ? "" : "max-md:-right-52"
+        className={`max-md:fixed max-md:top-0 max-md:right-0 max-md:bottom-0 max-md:bg-main max-md:w-[200px] max-md:pt-[70px] max-md:duration-300 ${
+          mobileMenu ? "max-md:right-0" : "max-md:-right-[200px]"
         }`}
+        ref={sideBarRef}
       >
         <li className="text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-4 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 max-lg:hidden">
           <Link to="hero" smooth={true} offset={0} duration={500}>
@@ -83,8 +94,9 @@ const Navbar = () => {
         </li>
       </ul>
       <CiMenuFries
-        className="text-3xl hidden max-md:block"
+        className="text-3xl hidden max-md:block z-20"
         onClick={toggleMenu}
+        ref={menuIconRef}
       />
     </nav>
   );

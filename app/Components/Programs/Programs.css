@@ -19,7 +19,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 15, 152, 0.3);
+  background: rgba(152, 0, 25, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,8 @@
   padding-top: 70%;
   transition: 0.4s;
 }
-.caption img {
+.caption img,
+.caption svg {
   width: 60px;
   margin-bottom: 10px;
 }
