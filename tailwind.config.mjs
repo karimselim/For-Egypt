@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -7,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/hero.png')",
+      },
       colors: {
         main: "#da2d2d",
       },
