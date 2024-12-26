@@ -20,7 +20,8 @@
   margin-left: 10px;
 }
 .contact-col p {
-  max-width: 450px;
+  /* max-width: 450px; */
+  text-align: right;
   line-height: 1.3;
 }
 .contact-col ul li {
