@@ -1,15 +1,23 @@
 // eslint-disable-next-line
-import React from "react";
-import "./Contact.css";
-import msg_icon from "../../assets/msg-icon.png";
-import mail_icon from "../../assets/mail-icon.png";
-import phone_icon from "../../assets/phone-icon.png";
-import location_icon from "../../assets/location-icon.png";
+import { useState, useEffect, useRef } from "react";
 import white_arrow from "../../assets/white-arrow.png";
 import Image from "next/image";
+import logo from "../../assets/logo.png";
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");
+  const [result, setResult] = useState("");
+  const [imgSrc, setImgSrc] = useState(logo);
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImgSrc(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -35,8 +43,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact flex flex-wrap items-center justify-between px-[7%] py-20 max-md:block">
-      <div className="contact-col basis-[48%] text-[#676767] max-md:p-5">
+    <section className="contact flex flex-wrap gap-12 items-center justify-between px-[7%] py-20 max-md:block">
+      {/* <aside className="contact-col basis-[48%] text-[#676767] max-md:p-5">
         <h3 className="text-[#000f38] font-medium text-[25px] flex items-center mb-5">
           Send us a message{" "}
           <Image src={msg_icon} alt="" className="w-[35px] ml-3" />
@@ -63,33 +71,48 @@ const Contact = () => {
             MA 02139, United States
           </li>
         </ul>
-      </div>
-      <div className="contact-col basis-[48%] max-md:p-5">
+      </aside> */}
+      <aside className="w-full max-md:p-5 text-right">
         <form onSubmit={onSubmit}>
-          <label>Your name</label>
+          <div className="img-input relative flex justify-center items-center">
+            <input
+              type="file"
+              accept="image/*"
+              className="w-32 max-md:w-24 absolute h-full z-20 opacity-0 rounded-full"
+              onChange={handleFileChange}
+            />
+            <Image
+              src={imgSrc}
+              alt="Profile"
+              className="m-auto w-32 max-md:w-24 rounded-full"
+              width={128} // Add width
+              height={128} // Add height
+            />
+          </div>
+          <label htmlFor="name">الاسم الكامل</label>
           <input
             type="text"
             name="name"
-            placeholder="Enter your name"
+            placeholder="أدخل اسمك الكامل"
             required
-            className="block w-full bg-[#ebecfe] p-4 outline-none mb-4 mt-1"
+            className="block w-full bg-[#ebecfe] p-4 outline-none mb-4 mt-1 text-right"
           />
-          <label>Phone Number</label>
+          <label htmlFor="phone">رقم الهاتف</label>
           <input
             type="tel"
             name="phone"
-            placeholder="Enter your phone number"
+            placeholder="أدخل رقم هاتفك"
             required
-            className="block w-full bg-[#ebecfe] p-4 outline-none mb-4 mt-1"
+            className="block w-full bg-[#ebecfe] p-4 outline-none mb-4 mt-1 text-right"
           />
-          <label>Write your messages here</label>
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Enter your message"
+          <label htmlFor="id">الرقم القومي</label>
+          <input
+            type="text"
+            name="id"
+            placeholder="أدخل الرقم القومي الخاص بك"
             required
-            className="block w-full bg-[#ebecfe] p-4 outline-none mb-4 mt-1 resize-none"
-          ></textarea>
+            className="block w-full bg-[#ebecfe] p-4 outline-none mb-4 mt-1 text-right"
+          />
           <button
             type="submit"
             className="btn dark-btn flex items-center gap-2 bg-[#000f38] text-white py-2 px-4 rounded hover:bg-opacity-80"
@@ -98,8 +121,8 @@ const Contact = () => {
           </button>
         </form>
         <span className="block my-5">{result}</span>
-      </div>
-    </div>
+      </aside>
+    </section>
   );
 };
 

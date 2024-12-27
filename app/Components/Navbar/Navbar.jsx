@@ -54,7 +54,7 @@ const Navbar = () => {
         sticky ? "bg-main py-4" : "py-1"
       }`}
     >
-      <Link to="hero" smooth={true} offset={0} duration={500}>
+      <Link smooth={true} to="hero" offset={0} duration={500}>
         <h2 className="text-3xl max-xl:text-2xl max-lg:text-xl max-md:text-2xl flex gap-2 max-sm:text-2xl z-20">
           <Image
             src={forEgypt}
@@ -66,39 +66,75 @@ const Navbar = () => {
         </h2>
       </Link>
       <ul
-        className={`max-md:fixed max-md:top-0 max-md:bottom-0 max-md:bg-main max-md:w-[65%] max-md:pt-[70px] max-md:duration-300 ${
+        className={`z-30 max-md:fixed max-md:top-0 max-md:bottom-0 max-md:bg-main max-md:w-[65%] max-md:pt-[70px] max-md:duration-300 ${
           mobileMenu ? " max-md:right-0" : "-right-[65%]"
         }`}
         ref={sideBarRef}
       >
         <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 max-xl:hidden">
-          <Link to="hero" smooth={true} offset={0} duration={500}>
+          <Link
+            className="w-full block"
+            to="hero"
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
             الصفحة الرئيسية
           </Link>
         </li>
         <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
-          <Link to="program" smooth={true} offset={-260} duration={500}>
+          <Link
+            className="w-full block"
+            to="program"
+            smooth={true}
+            offset={-260}
+            duration={500}
+          >
             خدماتنا
           </Link>
         </li>
         <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
-          <Link to="about" smooth={true} offset={-150} duration={500}>
+          <Link
+            className="w-full block"
+            to="about"
+            smooth={true}
+            offset={-150}
+            duration={500}
+          >
             من نحن؟
           </Link>
         </li>
         <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
-          <Link to="campus" smooth={true} offset={-260} duration={500}>
+          <Link
+            className="w-full block"
+            to="campus"
+            smooth={true}
+            offset={-260}
+            duration={500}
+          >
             ذكرياتنا
           </Link>
         </li>
         <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
-          <Link to="testimonials" smooth={true} offset={-260} duration={500}>
+          <Link
+            className="w-full block"
+            to="testimonials"
+            smooth={true}
+            offset={-260}
+            duration={500}
+          >
             آراء طلابنا
           </Link>
         </li>
         <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
           <Button className="bg-white text-black max-xl:px-4">
-            <Link to="contact" smooth={true} offset={-260} duration={500}>
+            <Link
+              className="w-full block"
+              to="contact"
+              smooth={true}
+              offset={-260}
+              duration={500}
+            >
               انضم الينا الآن
             </Link>
           </Button>
