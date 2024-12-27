@@ -141,7 +141,7 @@ const Navbar = () => {
         </li>
       </ul>
       <CiMenuFries
-        className="text-3xl hidden max-md:block z-20"
+        className="text-3xl hidden max-md:block z-50"
         onClick={toggleMenu}
         ref={menuIconRef}
       />

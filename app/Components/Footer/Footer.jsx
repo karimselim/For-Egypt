@@ -1,14 +1,13 @@
 // eslint-disable-next-line
 import React from "react";
-import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer px-[7%] py-4">
-      <p>© 2024 Edusity. All rights reserved.</p>
-      <ul>
-        <li>Terms of Setrvices</li>
-        <li>Privacy Policy</li>
+    <footer className="footer px-[7%] py-4 flex items-center justify-between border-t border-t-[#797979] max-md:block max-md:text-center">
+      <p>© جميع الحقوق مستحقة لأسرة طلاب من أجل مصر </p>
+      <ul className="mt-[10px]">
+        <li className="inline-block ml-5 max-md:m-[10px]">شروط الاستخدام</li>
+        <li className="inline-block ml-5 max-md:m-[10px]">سياسة الخصوصية</li>
       </ul>
     </footer>
   );
