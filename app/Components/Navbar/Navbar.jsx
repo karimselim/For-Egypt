@@ -66,8 +66,8 @@ const Navbar = () => {
         </h2>
       </Link>
       <ul
-        className={`max-md:fixed max-md:top-0 max-md:right-0 max-md:bottom-0 max-md:bg-main max-md:w-[200px] max-md:pt-[70px] max-md:duration-300 ${
-          mobileMenu ? "max-md:right-0" : "max-md:-right-[200px]"
+        className={`max-md:fixed max-md:top-0 max-md:bottom-0 max-md:bg-main max-md:w-[200px] max-md:pt-[70px] max-md:duration-300 ${
+          mobileMenu ? " max-md:right-0" : "-right-[200px]"
         }`}
         ref={sideBarRef}
       >
