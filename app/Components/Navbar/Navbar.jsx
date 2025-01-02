@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <nav
       className={`px-[7%] duration-300 w-full text-white fixed top-0 left-0 flex items-center justify-between z-10 max-md:py-4 ${
-        sticky ? "bg-main py-4" : "py-1"
+        sticky ? "bg-main py-5" : "py-3"
       }`}
     >
       <CiMenuFries
@@ -137,13 +137,13 @@ const Navbar = () => {
         </li>
       </ul>
       <Link smooth={true} to="hero" offset={0} duration={500}>
-        <div className="text-3xl max-xl:text-2xl max-lg:text-xl max-md:text-2xl flex gap-2 max-sm:text-2xl z-20">
+        <div className="text-3xl max-xl:text-2xl max-lg:text-xl max-md:text-2xl flex gap-4 max-sm:text-2xl z-20">
           <Image
             src={forEgypt}
             alt=""
-            className="w-12 max-sm:w-6 object-contain"
+            className="w-12 max-sm:w-10 object-contain"
           />
-          <Image src={uni} alt="" className="w-12 max-sm:w-6 object-contain" />
+          <Image src={uni} alt="" className="w-12 max-sm:w-10 object-contain" />
           <div>
             <h2> طلاب من أجل مصر</h2>
             <span className="text-base text-right block">جامعة بورسعيد</span>
