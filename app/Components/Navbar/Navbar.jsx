@@ -64,7 +64,7 @@ const Navbar = () => {
         ref={sideBarRef}
       >
         <IoMdClose
-          className="md:hidden absolute top-4 right-10 text-3xl cursor-pointer"
+          className="md:hidden absolute top-[1.85rem] right-10 text-3xl cursor-pointer"
           ref={menuIconRef}
         />
         <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
