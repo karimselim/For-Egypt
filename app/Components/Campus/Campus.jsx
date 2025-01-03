@@ -35,7 +35,6 @@ const Campus = () => {
       </div>
       <Button className="px-6 py-3 before:!bg-main !bg-main !text-white">
         See more here
-        {/* <Image src={white_arrow} alt="" /> */}
       </Button>
     </div>
   );
