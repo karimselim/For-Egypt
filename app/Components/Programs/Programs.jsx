@@ -39,6 +39,9 @@ const Programs = () => {
   return (
     <section className="programs mx-[7%] my-20 flex justify-between max-md:flex-col gap-12">
       <div className="relative">
+        {isMobile && (
+          <h3 className="text-xl mb-2 text-center">كورسات و تدريبات</h3>
+        )}
         <div className="program flex-basis-[31%] relative">
           <Image
             src={program_1}
@@ -50,9 +53,9 @@ const Programs = () => {
             <p>كورسات و تدريبات</p>
           </div>
         </div>
-        {isMobile && <p>this is the content for the courses</p>}
       </div>
       <div className="relative">
+        {isMobile && <h3 className="text-xl mb-2 text-center">خصومات حصرية</h3>}
         <div className="program flex-basis-[31%] relative">
           <Image
             src={program_2}
@@ -64,9 +67,11 @@ const Programs = () => {
             <p>خصومات حصرية</p>
           </div>
         </div>
-        {isMobile && <p>this is the contnet of discounts</p>}
       </div>
       <div className="relative">
+        {isMobile && (
+          <h3 className="text-xl mb-2 text-center">فعاليات متنوعة</h3>
+        )}
         <div className="program flex-basis-[31%] relative">
           <Image
             src={program_3}
@@ -78,7 +83,6 @@ const Programs = () => {
             <p>فعاليات متنوعة</p>
           </div>
         </div>
-        {isMobile && <p>this is the content of events</p>}
       </div>
     </section>
   );
