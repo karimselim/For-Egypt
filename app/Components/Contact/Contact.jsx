@@ -170,7 +170,7 @@ const Contact = () => {
           />
           {errors.name && <p className="text-red-500">{errors.name}</p>}
 
-          <label htmlFor="phone">رقم الهاتف ( يدعم واتسآب )</label>
+          <label htmlFor="phone">( WhatsApp يدعم) رقم الهاتف </label>
           <input
             type="tel"
             name="phone"
