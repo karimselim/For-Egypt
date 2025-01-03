@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <nav
       className={`px-[7%] duration-300 w-full text-white fixed top-0 left-0 flex items-center justify-between z-10 max-md:py-4 ${
-        sticky ? "bg-main py-5" : "py-3"
+        sticky ? "bg-main py-4" : "py-2"
       }`}
     >
       <CiMenuFries
@@ -67,7 +67,11 @@ const Navbar = () => {
           className="md:hidden absolute top-[1.85rem] right-10 text-3xl cursor-pointer"
           ref={menuIconRef}
         />
-        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+            sticky ? null : "hover:text-main max-md:hover:text-black"
+          }`}
+        >
           <Button className="bg-white text-black max-xl:px-4 max-md:hidden">
             <Link
               className="w-full block"
@@ -80,7 +84,11 @@ const Navbar = () => {
             </Link>
           </Button>
         </li>
-        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+            sticky ? null : "hover:text-main max-md:hover:text-black"
+          }`}
+        >
           <Link
             className="w-full block"
             to="testimonials"
@@ -91,7 +99,11 @@ const Navbar = () => {
             آراء طلابنا
           </Link>
         </li>
-        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+            sticky ? null : "hover:text-main max-md:hover:text-black"
+          }`}
+        >
           <Link
             className="w-full block"
             to="campus"
@@ -102,7 +114,11 @@ const Navbar = () => {
             ذكرياتنا
           </Link>
         </li>
-        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+            sticky ? null : "hover:text-main max-md:hover:text-black"
+          }`}
+        >
           <Link
             className="w-full block"
             to="about"
@@ -113,7 +129,11 @@ const Navbar = () => {
             من نحن؟
           </Link>
         </li>
-        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+            sticky ? null : "hover:text-main max-md:hover:text-black"
+          }`}
+        >
           <Link
             className="w-full block"
             to="program"
@@ -124,7 +144,13 @@ const Navbar = () => {
             خدماتنا
           </Link>
         </li>
-        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 max-xl:hidden">
+        <li
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 max-xl:hidden ${
+            sticky && !mobileMenu
+              ? null
+              : "hover:text-main max-md:hover:text-black"
+          }`}
+        >
           <Link
             className="w-full block"
             to="hero"
