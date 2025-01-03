@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "@/app/UI/Button";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -12,9 +12,17 @@ const Hero = () => {
         <p className="max-w-[700px] mx-auto my-[10px] leading-[1.4] max-sm:text-[14px] max-sm:my-[15px] max-sm:mb-[30px]">
           طلاب من أجل مصر - معًا مهمتنا بالقوة والشرف
         </p>
-        <Button className="text-black bg-white text-lg">
-          <FaArrowLeftLong className="pr-3 text-2xl" /> اكتشف المزيد
-        </Button>
+        <button className="rounded-[2.5rem] cursor-pointer border-0 outline-none inline-flex items-center justify-center text-black bg-white text-lg">
+          <Link
+            className="w-full py-[0.875rem] px-6 flex items-center"
+            to="contact"
+            smooth={true}
+            offset={-260}
+            duration={500}
+          >
+            <FaArrowLeftLong className="pr-3 text-2xl" /> انضم الينا
+          </Link>
+        </button>
       </div>
     </main>
   );
