@@ -1,15 +1,8 @@
 import React from "react";
+import classes from "./button.module.css";
 
 const Button = ({ children, className }) => {
-  return (
-    <button
-      className={`py-[0.875rem] px-6 text-base rounded-[2.5rem] cursor-pointer border-0 outline-none inline-flex items-center justify-center ${
-        className || null
-      }`}
-    >
-      {children}
-    </button>
-  );
+  return <button className={`${classes.btn} ${className}`}>{children}</button>;
 };
 
 export default Button;

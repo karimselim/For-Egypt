@@ -20,9 +20,9 @@ const Main = () => {
       <Navbar />
       <Hero />
       <div className="">
+        <About setPlayState={setPlayState} />
         <Title subTitle="خدماتنا" title="ماذا نقدم؟" />
         <Programs />
-        <About setPlayState={setPlayState} />
         <Title subTitle="ذكرياتنا" title="مكتبة الصور" />
         <Campus />
         <Title subTitle="آراء طلابنا" title="كلمات من القلب" />
