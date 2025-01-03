@@ -145,9 +145,13 @@ const Navbar = () => {
           <Image
             src={forEgypt}
             alt=""
-            className="w-12 max-sm:w-10 object-contain"
+            className="w-12 max-sm:w-10 object-contain max-lg:w-8"
           />
-          <Image src={uni} alt="" className="w-12 max-sm:w-10 object-contain" />
+          <Image
+            src={uni}
+            alt=""
+            className="w-12 max-sm:w-10 object-contain max-lg:w-8 "
+          />
         </div>
       </Link>
     </nav>
