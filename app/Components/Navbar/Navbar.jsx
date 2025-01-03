@@ -67,7 +67,7 @@ const Navbar = () => {
           className="md:hidden absolute top-[1.85rem] right-10 text-3xl cursor-pointer"
           ref={menuIconRef}
         />
-        <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
           <Button className="bg-white text-black max-xl:px-4 max-md:hidden">
             <Link
               className="w-full block"
@@ -80,7 +80,7 @@ const Navbar = () => {
             </Link>
           </Button>
         </li>
-        <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
           <Link
             className="w-full block"
             to="testimonials"
@@ -91,7 +91,7 @@ const Navbar = () => {
             آراء طلابنا
           </Link>
         </li>
-        <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
           <Link
             className="w-full block"
             to="campus"
@@ -102,7 +102,7 @@ const Navbar = () => {
             ذكرياتنا
           </Link>
         </li>
-        <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
           <Link
             className="w-full block"
             to="about"
@@ -113,7 +113,7 @@ const Navbar = () => {
             من نحن؟
           </Link>
         </li>
-        <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
+        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1">
           <Link
             className="w-full block"
             to="program"
@@ -124,7 +124,7 @@ const Navbar = () => {
             خدماتنا
           </Link>
         </li>
-        <li className="text-xl max-lg:text-base max-md:text-xl hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-3 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 max-xl:hidden">
+        <li className="text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 max-xl:hidden">
           <Link
             className="w-full block"
             to="hero"
@@ -137,10 +137,10 @@ const Navbar = () => {
         </li>
       </ul>
       <Link smooth={true} to="hero" offset={0} duration={500}>
-        <div className="text-3xl max-xl:text-2xl max-lg:text-xl max-md:text-2xl flex gap-4 max-sm:text-2xl z-20">
+        <div className="text-2xl max-xl:text-xl max-lg:text-lg max-md:text-xl flex gap-4 max-sm:text-xl z-20">
           <div>
             <h2> طلاب من أجل مصر</h2>
-            <span className="text-base text-right block">جامعة بورسعيد</span>
+            <span className="text-sm text-right block">جامعة بورسعيد</span>
           </div>
           <Image
             src={forEgypt}
