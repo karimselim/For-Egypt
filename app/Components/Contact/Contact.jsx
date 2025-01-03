@@ -9,6 +9,7 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import { IoPersonOutline } from "react-icons/io5";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBL1poYggtKKWy4BxaukdHsHoJr12JvNE8",
@@ -139,18 +140,21 @@ const Contact = () => {
             <input
               type="file"
               accept="image/*"
-              className="w-32 max-md:w-24 absolute h-full z-20 opacity-0 rounded-full cursor-pointer"
+              className="w-32 h-32 max-md:w-24 max-md:h-24 absolute z-20 opacity-0 rounded-full cursor-pointer"
               onChange={handleFileChange}
             />
             {imageBase64 ? (
               <img
                 src={imageBase64}
                 alt="Uploaded"
-                className="m-auto w-32 max-md:w-24 rounded-full"
+                className="m-auto w-32 max-md:w-24 h-32 max-md:h-24 rounded-full"
               />
             ) : (
-              <div className="placeholder-image w-32 max-md:w-24 bg-gray-200 rounded-full flex justify-center items-center">
-                <span>اختر صورة</span>
+              <div className="placeholder-image w-32 h-32 max-md:w-24 max-md:h-24 bg-gray-200 rounded-full flex justify-center items-center relative">
+                <span>
+                  <IoPersonOutline className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-4xl" />
+                  <span className="z-[5] relative"> اختر صورة</span>
+                </span>
               </div>
             )}
           </div>
@@ -162,18 +166,18 @@ const Contact = () => {
             placeholder="أدخل اسمك الكامل"
             value={formValues.name}
             onChange={handleChange}
-            className="block w-full bg-[#ebecfe] p-4 outline-none mb-1 mt-1 text-right"
+            className="block w-full bg-[#ebecfe] p-4 outline-none mb-3 mt-1 text-right rounded-md"
           />
           {errors.name && <p className="text-red-500">{errors.name}</p>}
 
-          <label htmlFor="phone">رقم الهاتف</label>
+          <label htmlFor="phone">رقم الهاتف ( يدعم واتسآب )</label>
           <input
             type="tel"
             name="phone"
             placeholder="أدخل رقم هاتفك"
             value={formValues.phone}
             onChange={handleChange}
-            className="block w-full bg-[#ebecfe] p-4 outline-none mb-1 mt-1 text-right"
+            className="block w-full bg-[#ebecfe] p-4 outline-none mb-3 mt-1 text-right rounded-md"
           />
           {errors.phone && <p className="text-red-500">{errors.phone}</p>}
 
@@ -184,7 +188,7 @@ const Contact = () => {
             placeholder="أدخل الرقم القومي الخاص بك"
             value={formValues.id}
             onChange={handleChange}
-            className="block w-full bg-[#ebecfe] p-4 outline-none mb-1 mt-1 text-right"
+            className="block w-full bg-[#ebecfe] p-4 outline-none mb-1 mt-1 text-right rounded-md"
           />
           {errors.id && <p className="text-red-500">{errors.id}</p>}
 
