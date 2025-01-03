@@ -54,7 +54,7 @@ const Navbar = () => {
       }`}
     >
       <CiMenuFries
-        className="text-3xl hidden max-md:block z-10"
+        className="text-3xl hidden max-md:block z-10 rotate-180 cursor-pointer"
         onClick={toggleMenu}
       />
       <ul
@@ -138,16 +138,16 @@ const Navbar = () => {
       </ul>
       <Link smooth={true} to="hero" offset={0} duration={500}>
         <div className="text-3xl max-xl:text-2xl max-lg:text-xl max-md:text-2xl flex gap-4 max-sm:text-2xl z-20">
+          <div>
+            <h2> طلاب من أجل مصر</h2>
+            <span className="text-base text-right block">جامعة بورسعيد</span>
+          </div>
           <Image
             src={forEgypt}
             alt=""
             className="w-12 max-sm:w-10 object-contain"
           />
           <Image src={uni} alt="" className="w-12 max-sm:w-10 object-contain" />
-          <div>
-            <h2> طلاب من أجل مصر</h2>
-            <span className="text-base text-right block">جامعة بورسعيد</span>
-          </div>
         </div>
       </Link>
     </nav>
