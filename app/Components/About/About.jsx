@@ -7,7 +7,7 @@ import Image from "next/image";
 const About = ({ setPlayState }) => {
   return (
     <section className="about mx-[7%] my-24 flex justify-between max-md:flex-col gap-12">
-      <aside className="about-left flex-basis-[40%] relative max-md:flex-basis-full max-md:order-2">
+      <aside className="about-left flex-basis-[40%] relative max-md:flex-basis-full max-md:order-2 h-fit">
         <Image
           src={about_img}
           alt=""
