@@ -6,6 +6,7 @@ import gallery_3 from "../../assets/gallery-3.png";
 import gallery_4 from "../../assets/gallery-4.png";
 import white_arrow from "../../assets/white-arrow.png";
 import Image from "next/image";
+import Button from "@/app/UI/Button";
 
 const Campus = () => {
   return (
@@ -32,9 +33,10 @@ const Campus = () => {
           alt=""
         />
       </div>
-      <button className="btn dark-btn">
-        See more here <Image src={white_arrow} alt="" />
-      </button>
+      <Button className="px-6 py-3 before:!bg-main !bg-main !text-white">
+        See more here
+        {/* <Image src={white_arrow} alt="" /> */}
+      </Button>
     </div>
   );
 };

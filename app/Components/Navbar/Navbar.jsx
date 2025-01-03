@@ -72,9 +72,9 @@ const Navbar = () => {
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
-          <Button className="bg-white text-black max-xl:px-4 max-md:hidden">
+          <Button className="bg-white text-black max-md:hidden">
             <Link
-              className="w-full block"
+              className="w-full block py-3 px-6"
               to="contact"
               smooth={true}
               offset={-260}

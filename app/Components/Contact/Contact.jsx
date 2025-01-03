@@ -10,6 +10,7 @@ import {
   where,
 } from "firebase/firestore";
 import { IoPersonOutline } from "react-icons/io5";
+import Button from "@/app/UI/Button";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBL1poYggtKKWy4BxaukdHsHoJr12JvNE8",
@@ -192,12 +193,12 @@ const Contact = () => {
           />
           {errors.id && <p className="text-red-500">{errors.id}</p>}
 
-          <button
+          <Button
             type="submit"
-            className="btn dark-btn flex items-center gap-2 bg-[#000f38] text-white py-2 px-4 rounded hover:bg-opacity-80 mt-4"
+            className="px-6 py-3 !bg-main before:!bg-main mt-4 !text-white"
           >
             سجل الآن
-          </button>
+          </Button>
         </form>
       </aside>
     </section>
