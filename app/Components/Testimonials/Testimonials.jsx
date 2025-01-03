@@ -46,7 +46,7 @@ const Testimonials = () => {
             <div className="slide">
               <div className="user-info">
                 <Image src={user_2} alt="" />
-                <div>
+                <div className="text-center">
                   <h3>مراد حافظ</h3>
                   <span>رئيس اتحاد طلاب جامعة بورسعيد</span>
                 </div>
