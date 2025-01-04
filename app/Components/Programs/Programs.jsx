@@ -34,7 +34,6 @@ const useIsMobile = () => {
 
 const Programs = () => {
   const isMobile = useIsMobile(); // Check if the device is mobile
-  console.log(isMobile);
 
   return (
     <section className="programs mx-[7%] my-20 flex justify-between max-md:flex-col gap-12">
