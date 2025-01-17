@@ -9,7 +9,6 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  letter-spacing: 4px;
   font-weight: bold;
   animation: moveInBottom 0.5s ease-in-out 0.75s;
   animation-fill-mode: backwards;

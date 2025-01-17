@@ -72,15 +72,15 @@ const Navbar = () => {
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
-          <Button className="bg-white text-black max-md:hidden">
+          <Button className="max-md:hidden">
             <Link
-              className="w-full block py-3 px-6"
+              className="w-full block py-4 px-6"
               to="contact"
               smooth={true}
               offset={-260}
               duration={500}
             >
-              انضم إلينا الآن
+              إنضم الينا الآن
             </Link>
           </Button>
         </li>
@@ -114,7 +114,7 @@ const Navbar = () => {
             ذكرياتنا
           </Link>
         </li>
-        
+
         <li
           className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
             sticky ? null : "hover:text-main max-md:hover:text-black"
