@@ -7,6 +7,7 @@ import gallery_4 from "../../assets/c5.jpg";
 import white_arrow from "../../assets/white-arrow.png";
 import Image from "next/image";
 import Button from "@/app/UI/Button";
+import Link from "next/link";
 
 const Campus = () => {
   return (
@@ -33,8 +34,13 @@ const Campus = () => {
           alt=""
         />
       </div>
-      <Button className="px-6 py-3 before:!bg-main !bg-main !text-white"  onclick="window.location.href='https://www.facebook.com/studentsforegyptPSU?mibextid=ZbWKwL';">
-        See more here
+      <Button className="">
+        <Link
+          href="https://www.facebook.com/studentsforegyptPSU?mibextid=ZbWKwL"
+          target="_blank"
+        >
+          See more here
+        </Link>
       </Button>
     </div>
   );
