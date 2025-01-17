@@ -10,8 +10,9 @@ const Hero = () => {
         <h1 className="text-[55px] font-semibold max-mid:text-[40px] max-sm:text-[30px] max-sm:max-w-[400px] max-sm:mx-auto">
           أسرة طلاب من أجل مصر
         </h1>
+        
         <p className="max-w-[700px] mx-auto my-[10px] leading-[1.4] max-sm:text-[14px] max-sm:my-[15px] max-sm:mb-[30px]">
-          طلاب من أجل مصر - معًا مهمتنا بالقوة والشرف
+         جامعة بورسعيد - معًا مهمتنا بالقوة والشرف
         </p>
         <Button className="">
           <Link
@@ -21,7 +22,7 @@ const Hero = () => {
             offset={-260}
             duration={500}
           >
-            <FaArrowLeftLong className="pr-3 text-2xl" /> انضم الينا
+            <FaArrowLeftLong className="pr-3 text-2xl" /> إنضم إلينا
           </Link>
         </Button>
       </div>

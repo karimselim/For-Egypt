@@ -23,7 +23,7 @@
 }
 .slider ul {
   display: flex;
-  width: 200%;
+  width: 750%;
   overflow-x: hidden;
   transition: 0.5s;
 }

@@ -157,6 +157,7 @@ const Contact = () => {
             <input
               type="file"
               accept="image/*"
+              required
               className="w-32 h-32 max-md:w-24 max-md:h-24 absolute z-20 opacity-0 rounded-full cursor-pointer"
               onChange={handleFileChange}
             />

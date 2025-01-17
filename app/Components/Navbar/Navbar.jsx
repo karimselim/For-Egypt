@@ -80,7 +80,7 @@ const Navbar = () => {
               offset={-260}
               duration={500}
             >
-              انضم الينا الآن
+              انضم إلينا الآن
             </Link>
           </Button>
         </li>
@@ -96,7 +96,7 @@ const Navbar = () => {
             offset={-260}
             duration={500}
           >
-            آراء طلابنا
+            الرؤية والتوجيه
           </Link>
         </li>
         <li
@@ -114,21 +114,7 @@ const Navbar = () => {
             ذكرياتنا
           </Link>
         </li>
-        <li
-          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
-            sticky ? null : "hover:text-main max-md:hover:text-black"
-          }`}
-        >
-          <Link
-            className="w-full block"
-            to="about"
-            smooth={true}
-            offset={-150}
-            duration={500}
-          >
-            من نحن؟
-          </Link>
-        </li>
+        
         <li
           className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
             sticky ? null : "hover:text-main max-md:hover:text-black"
@@ -142,6 +128,21 @@ const Navbar = () => {
             duration={500}
           >
             خدماتنا
+          </Link>
+        </li>
+        <li
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+            sticky ? null : "hover:text-main max-md:hover:text-black"
+          }`}
+        >
+          <Link
+            className="w-full block"
+            to="about"
+            smooth={true}
+            offset={-150}
+            duration={500}
+          >
+            من نحن؟
           </Link>
         </li>
         <li

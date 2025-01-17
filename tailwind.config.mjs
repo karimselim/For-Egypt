@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "url('/hero.png')",
+        hero: "url('/std.jpg')",
       },
       colors: {
         main: "#da2d2d",

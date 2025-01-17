@@ -1,8 +1,8 @@
 // eslint-disable-next-line
 import React from "react";
-import program_1 from "../../assets/program-1.png";
-import program_2 from "../../assets/program-2.png";
-import program_3 from "../../assets/program-3.png";
+import program_1 from "../../assets/traning.jpg";
+import program_2 from "../../assets/sponser.jpg";
+import program_3 from "../../assets/events.jpg";
 import Image from "next/image";
 import { FaBookReader } from "react-icons/fa";
 import { CiDiscount1 } from "react-icons/ci";

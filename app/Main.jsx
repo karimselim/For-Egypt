@@ -25,9 +25,9 @@ const Main = () => {
         <Programs />
         <Title subTitle="ذكرياتنا" title="مكتبة الصور" />
         <Campus />
-        <Title subTitle="آراء طلابنا" title="كلمات من القلب" />
+        <Title subTitle="الرؤية والتوجيه" title="كلمات من القلب" />
         <Testimonials />
-        <Title subTitle="انضم الينا الآن" title="فرصتك لتصنع النجاح" />
+        <Title subTitle="انضم إلينا الآن" title="فرصتك لتصنع النجاح" />
         <Contact />
         <Footer />
       </div>
