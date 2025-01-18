@@ -101,9 +101,25 @@ const Contact = () => {
     return isValid;
   };
 
+  const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
+
+    if (file.size > MAX_IMAGE_SIZE) {
+      setErrors((prev) => ({
+        ...prev,
+        image: "حجم الصورة يجب ألا يزيد عن 5 ميجا بايت",
+      }));
+      setImageBase64(null);
+      return;
+    } else {
+      setErrors((prev) => ({
+        ...prev,
+        image: "",
+      }));
+    }
 
     const reader = new FileReader();
     reader.onload = () => {
