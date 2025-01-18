@@ -40,7 +40,7 @@ const Campus = () => {
           target="_blank"
           className="py-3 px-6 block"
         >
-          See more here
+          شاهد المزيد
         </Link>
       </Button>
     </div>
