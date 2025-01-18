@@ -34,10 +34,11 @@ const Campus = () => {
           alt=""
         />
       </div>
-      <Button className="">
+      <Button>
         <Link
           href="https://www.facebook.com/studentsforegyptPSU?mibextid=ZbWKwL"
           target="_blank"
+          className="py-3 px-6 block"
         >
           See more here
         </Link>
