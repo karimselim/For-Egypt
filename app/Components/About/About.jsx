@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import React from "react";
-import about_img from "../../assets/about.png";
+import about_img from "../../assets/about.jpeg";
 import play_icon from "../../assets/play-icon.png";
 import Image from "next/image";
 import hands from "../../assets/hands.png";
