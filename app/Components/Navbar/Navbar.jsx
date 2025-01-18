@@ -73,7 +73,7 @@ const Navbar = () => {
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
-          {sticky ? (
+          {sticky || mobileMenu ? (
             <WhiteBtn className="max-md:hidden">
               <Link
                 className="w-full block py-4 px-6"
