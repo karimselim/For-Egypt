@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`px-[7%] duration-300 w-full text-white fixed top-0 left-0 flex items-center justify-between z-10 max-md:py-4 ${
+      className={`px-[7%] max-lg:px-[5%] duration-300 w-full text-white fixed top-0 left-0 flex items-center justify-between z-10 max-md:py-4 ${
         sticky ? "bg-main py-4" : "py-2"
       }`}
     >
@@ -69,7 +69,7 @@ const Navbar = () => {
           ref={menuIconRef}
         />
         <li
-          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1 ${
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
@@ -100,7 +100,7 @@ const Navbar = () => {
           )}
         </li>
         <li
-          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1 ${
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
@@ -115,7 +115,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li
-          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1 ${
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
@@ -131,7 +131,7 @@ const Navbar = () => {
         </li>
 
         <li
-          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1 ${
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
@@ -146,7 +146,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li
-          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1 ${
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
@@ -161,7 +161,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li
-          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 max-xl:hidden ${
+          className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1 max-xl:hidden ${
             sticky && !mobileMenu
               ? null
               : "hover:text-main max-md:hover:text-black"
@@ -179,7 +179,7 @@ const Navbar = () => {
         </li>
       </ul>
       <Link smooth={true} to="hero" offset={0} duration={500}>
-        <div className="text-2xl max-xl:text-xl max-lg:text-lg max-md:text-xl flex gap-4 max-sm:text-xl z-20">
+        <div className="text-2xl max-xl:text-xl max-lg:text-lg max-md:text-xl flex gap-4 max-lg:gap-2 max-sm:text-xl z-20">
           <div>
             <h2> طلاب من أجل مصر</h2>
             <span className="text-sm text-right block">جامعة بورسعيد</span>
