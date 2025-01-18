@@ -47,6 +47,7 @@ const Contact = () => {
     name: "",
     phone: "",
     id: "",
+    college: "",
   });
   const [imageBase64, setImageBase64] = useState(null);
   const [errors, setErrors] = useState({});
@@ -86,6 +87,16 @@ const Contact = () => {
       isValid = false;
     }
 
+    if (!formValues.college.trim()) {
+      newErrors.college = "اسم الكلية مطلوب";
+      isValid = false;
+    }
+
+    if (!imageBase64) {
+      newErrors.image = "الصورة مطلوبة";
+      isValid = false;
+    }
+
     setErrors(newErrors);
     return isValid;
   };
@@ -107,7 +118,6 @@ const Contact = () => {
     if (!validate()) return;
 
     try {
-      // Query Firestore to check for an existing user with the same name
       const querySnapshot = await getDocs(
         query(collection(db, "contacts"), where("id", "==", formValues.id))
       );
@@ -117,18 +127,17 @@ const Contact = () => {
         return;
       }
 
-      // Add the new document if the name is unique
       const docRef = await addDoc(collection(db, "contacts"), {
         name: formValues.name,
         phone: formValues.phone,
         id: formValues.id,
+        college: formValues.college,
         image: imageBase64,
         createdAt: new Date(),
       });
 
       alert("تم إرسال البيانات بنجاح! Document ID: " + docRef.id);
 
-      // Clear form
       setFormValues({ name: "", phone: "", id: "" });
       setImageBase64(null);
     } catch (error) {
@@ -157,7 +166,7 @@ const Contact = () => {
             <input
               type="file"
               accept="image/*"
-              required
+              // required
               className="w-32 h-32 max-md:w-24 max-md:h-24 absolute z-20 opacity-0 rounded-full cursor-pointer"
               onChange={handleFileChange}
             />
@@ -176,8 +185,13 @@ const Contact = () => {
               </div>
             )}
           </div>
+          {errors.image && (
+            <p className="text-red-500 text-center -mt-4">{errors.image}</p>
+          )}
 
-          <label htmlFor="name">الاسم الكامل</label>
+          <label className="block mt-3" htmlFor="name">
+            الاسم الكامل
+          </label>
           <input
             type="text"
             name="name"
@@ -188,7 +202,9 @@ const Contact = () => {
           />
           {errors.name && <p className="text-red-500">{errors.name}</p>}
 
-          <label htmlFor="phone">( WhatsApp يدعم) رقم الهاتف </label>
+          <label className="block mt-3" htmlFor="phone">
+            ( WhatsApp يدعم) رقم الهاتف{" "}
+          </label>
           <input
             type="tel"
             name="phone"
@@ -199,7 +215,9 @@ const Contact = () => {
           />
           {errors.phone && <p className="text-red-500">{errors.phone}</p>}
 
-          <label htmlFor="id">الرقم القومي</label>
+          <label className="block mt-3" htmlFor="id">
+            الرقم القومي
+          </label>
           <input
             type="text"
             name="id"
@@ -209,6 +227,19 @@ const Contact = () => {
             className="block w-full bg-[#ebecfe] p-4 outline-none mb-1 mt-1 text-right rounded-md"
           />
           {errors.id && <p className="text-red-500">{errors.id}</p>}
+
+          <label className="block mt-3" htmlFor="college">
+            اسم الكلية
+          </label>
+          <input
+            type="text"
+            name="college"
+            placeholder="أدخل اسم الكلية"
+            value={formValues.college}
+            onChange={handleChange}
+            className="block w-full bg-[#ebecfe] p-4 outline-none mb-3 mt-1 text-right rounded-md"
+          />
+          {errors.college && <p className="text-red-500">{errors.college}</p>}
 
           <Button
             type="submit"
