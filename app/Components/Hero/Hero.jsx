@@ -15,7 +15,7 @@ const Hero = () => {
 
         <p className="flex items-center justify-center gap-1 max-w-[700px] mx-auto my-[10px] leading-[1.4] max-sm:text-[14px] max-sm:my-[15px] max-sm:mb-[30px]">
           جامعة بورسعيد - معًا مهمتنا بالقوة والشرف
-          <Image src={hands} alt="" className="w-8" />
+          {/* <Image src={hands} alt="" className="w-8" /> */}
         </p>
         <Button className="">
           <Link
