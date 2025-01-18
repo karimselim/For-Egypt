@@ -11,7 +11,6 @@ const Button = ({ children, className }) => {
       {children}
     </button>
   );
-  //  <button className={`${classes.btn} ${className}`}>{children}</button>;
 };
 
 export default Button;

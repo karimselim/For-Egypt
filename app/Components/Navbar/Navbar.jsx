@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import Button from "@/app/UI/Button";
+import WhiteBtn from "@/app/UI/WhiteBtn";
 import { CiMenuFries } from "react-icons/ci";
 import Image from "next/image";
 import forEgypt from "../../assets/forEgyptlogo.png";
@@ -72,17 +73,31 @@ const Navbar = () => {
             sticky ? null : "hover:text-main max-md:hover:text-black"
           }`}
         >
-          <Button className="max-md:hidden">
-            <Link
-              className="w-full block py-4 px-6"
-              to="contact"
-              smooth={true}
-              offset={-260}
-              duration={500}
-            >
-              إنضم الينا الآن
-            </Link>
-          </Button>
+          {sticky ? (
+            <WhiteBtn className="max-md:hidden">
+              <Link
+                className="w-full block py-4 px-6"
+                to="contact"
+                smooth={true}
+                offset={-260}
+                duration={500}
+              >
+                إنضم الينا الآن
+              </Link>
+            </WhiteBtn>
+          ) : (
+            <Button className="max-md:hidden">
+              <Link
+                className="w-full block py-4 px-6"
+                to="contact"
+                smooth={true}
+                offset={-260}
+                duration={500}
+              >
+                إنضم الينا الآن
+              </Link>
+            </Button>
+          )}
         </li>
         <li
           className={`text-lg max-lg:text-base max-md:text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-5 my-1 ${
