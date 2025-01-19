@@ -1,4 +1,5 @@
 // eslint-disable-next-line
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -7,10 +8,10 @@ const Footer = () => {
       <p>© جميع الحقوق مستحقة لأسرة طلاب من أجل مصر </p>
       <ul className="mt-[10px]">
         <li className="inline-block ml-5 max-md:m-[10px] cursor-pointer">
-          شروط الاستخدام
+          <Link href="/privacy-policy">شروط الاستخدام</Link>
         </li>
         <li className="inline-block ml-5 max-md:m-[10px] cursor-pointer">
-          سياسة الخصوصية
+          {/* <Link>سياسة الخصوصية</Link> */}
         </li>
       </ul>
     </footer>
