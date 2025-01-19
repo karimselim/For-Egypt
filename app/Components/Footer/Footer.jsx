@@ -8,10 +8,10 @@ const Footer = () => {
       <p>© جميع الحقوق مستحقة لأسرة طلاب من أجل مصر </p>
       <ul className="mt-[10px]">
         <li className="inline-block ml-5 max-md:m-[10px] cursor-pointer">
-          <Link href="/privacy-policy">شروط الاستخدام</Link>
+          <Link href="/terms-of-use">شروط الاستخدام</Link>
         </li>
         <li className="inline-block ml-5 max-md:m-[10px] cursor-pointer">
-          {/* <Link>سياسة الخصوصية</Link> */}
+          <Link href="/privacy-policy">سياسة الخصوصية</Link>
         </li>
       </ul>
     </footer>
