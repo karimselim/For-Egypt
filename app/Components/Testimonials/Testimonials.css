@@ -13,6 +13,7 @@
   border-radius: 50%;
   cursor: pointer;
   background: #da2d2d;
+  z-index: 10;
 }
 .back-btn {
   right: auto;
@@ -37,6 +38,11 @@
   color: #676767;
   line-height: 1.4;
 }
+
+.pair {
+  display: flex;
+  width: 100%;
+}
 .slide img {
   border-radius: 50%;
   margin: auto;
@@ -46,6 +52,7 @@
 }
 .user-info {
   text-align: right;
+  min-width: 130px;
 }
 .user-info h3 {
   color: #da2d2d;
@@ -55,7 +62,7 @@
 
 @media (max-width: 800px) {
   .testimonials {
-    padding: 0 40px;
+    padding: 0 25px;
   }
   .next-btn,
   .back-btn {
@@ -80,9 +87,23 @@
   }
   .slider p {
     font-size: 12px;
+    display: block;
+    padding-top: 25px;
   }
 
   .slider ul li {
     width: 100%;
+  }
+  .slide {
+    display: flex;
+    gap: 20px;
+  }
+  .slider ul li:nth-child(even) .slide {
+    flex-direction: row-reverse;
+  }
+  .pair {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
