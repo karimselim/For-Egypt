@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import React from "react";
 import gallery_1 from "../../assets/c1.jpg";
-import gallery_2 from "../../assets/c2.jpg";
+import gallery_2 from "../../assets/c2.jpeg";
 import gallery_3 from "../../assets/c4.jpg";
 import gallery_4 from "../../assets/c5.jpg";
 import white_arrow from "../../assets/white-arrow.png";
