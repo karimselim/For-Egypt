@@ -81,6 +81,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-260}
                 duration={500}
+                onClick={() => setMobileMenu(false)}
               >
                 إنضم الينا الآن
               </Link>
@@ -110,6 +111,7 @@ const Navbar = () => {
             smooth={true}
             offset={-260}
             duration={500}
+            onClick={() => setMobileMenu(false)}
           >
             الرؤية والتوجيه
           </Link>
@@ -125,6 +127,7 @@ const Navbar = () => {
             smooth={true}
             offset={-260}
             duration={500}
+            onClick={() => setMobileMenu(false)}
           >
             ذكرياتنا
           </Link>
@@ -141,6 +144,7 @@ const Navbar = () => {
             smooth={true}
             offset={-260}
             duration={500}
+            onClick={() => setMobileMenu(false)}
           >
             خدماتنا
           </Link>
@@ -156,6 +160,7 @@ const Navbar = () => {
             smooth={true}
             offset={-150}
             duration={500}
+            onClick={() => setMobileMenu(false)}
           >
             من نحن؟
           </Link>
@@ -173,6 +178,7 @@ const Navbar = () => {
             smooth={true}
             offset={0}
             duration={500}
+            onClick={() => setMobileMenu(false)}
           >
             الصفحة الرئيسية
           </Link>
