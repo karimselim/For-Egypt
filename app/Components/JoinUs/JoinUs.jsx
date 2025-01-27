@@ -42,7 +42,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const Contact = () => {
+const JoinUs = () => {
   const [formValues, setFormValues] = useState({
     name: "",
     phone: "",
@@ -269,4 +269,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default JoinUs;
