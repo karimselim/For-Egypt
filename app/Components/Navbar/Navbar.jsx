@@ -1,3 +1,5 @@
+"use client";
+
 // eslint-disable-next-line
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
