@@ -7,7 +7,7 @@ const Contact = () => {
     <main className="bg-slate-100 h-screen w-screen overflow-hidden">
       <div className="w-screen px-[7%] flex gap-32 h-[calc(67%-88px)] max-lg:h-[calc(67%-100px)] max-md:max-md:h-[calc(67%-80px)] bg-main rounded-b-xl shadow-xl top-[88px] max-md:top-[80px] max-lg:top-[100px] relative">
         <aside className="w-[calc(50%-50px)] text-white">
-          <h2 className="text-xl pt-16">الشكاوى و المقترحات</h2>
+          <h2 className="text-xl pt-16 text-center">الشكاوى و المقترحات</h2>
           <div className="flex flex-row-reverse justify-between items-center my-5 max-md:block">
             <p>الإيميل</p>
             <Link
