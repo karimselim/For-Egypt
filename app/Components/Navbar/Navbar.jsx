@@ -10,8 +10,11 @@ import Image from "next/image";
 import forEgypt from "../../assets/forEgyptlogo.png";
 import uni from "../../assets/uniLogo.png";
 import { IoMdClose } from "react-icons/io";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathName = usePathname();
+
   const sideBarRef = useRef(null);
   const menuIconRef = useRef(null);
 
@@ -40,6 +43,7 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
+    if (pathName === "/contacts") setSticky(true);
     const handleScroll = () => {
       setSticky(window.scrollY > 50);
     };
