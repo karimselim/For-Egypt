@@ -43,7 +43,7 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
-    if (pathName === "/contact") setSticky(true);
+    if (pathName !== "/") setSticky(true);
     const handleScroll = () => {
       setSticky(window.scrollY > 50);
     };
