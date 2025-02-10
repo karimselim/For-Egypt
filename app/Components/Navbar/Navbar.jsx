@@ -43,10 +43,15 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
-    if (pathName !== "/") setSticky(true);
     const handleScroll = () => {
-      setSticky(window.scrollY > 50);
+      if (window.scrollY > 50) {
+        setSticky(true);
+      }
+      if (pathName === "/" && window.scrollY < 50) {
+        setSticky(false);
+      }
     };
+    if (pathName !== "/") setSticky(true);
 
     window.addEventListener("scroll", handleScroll);
     return () => {
