@@ -13,7 +13,7 @@
   border-radius: 50%;
   cursor: pointer;
   background: #da2d2d;
-  z-index: 10;
+  z-index: 1;
 }
 .back-btn {
   right: auto;
@@ -67,10 +67,11 @@
 .testimonials .slider p {
   display: block;
   padding-top: 25px;
+  max-width: 75%;
 }
 
 .testimonials .slider ul li {
-  width: 100%;
+  width: 100% !important;
 }
 .testimonials .slide {
   display: flex;
