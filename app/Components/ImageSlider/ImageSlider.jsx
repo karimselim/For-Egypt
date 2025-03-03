@@ -21,7 +21,7 @@ const ImageSlider = ({ imgs, liWidth, onImageClick }) => {
       const isPhone = window.matchMedia("(max-width: 479px)").matches;
       const isTablet = window.matchMedia(
         "(min-width: 480px) and (max-width: 767px)"
-      ).matches; // Tablets
+      ).matches;
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
       if (isPhone) {
