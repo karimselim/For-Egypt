@@ -9,11 +9,13 @@ import eventsData from "../data/events";
 const Events = () => {
   const [selectedImageId, setSelectedImageId] = useState(null);
   const [selectedImageKey, setSelectedImageKey] = useState(null);
+  const [obj, setObj] = useState(eventsData[1]);
 
   const handleImageClick = (imageId, imageKey) => {
     setSelectedImageId(imageId);
     setSelectedImageKey(imageKey);
-    console.log("Clicked Image ID:", imageId, "Image Key:", imageKey);
+
+    setObj(eventsData.find((e) => e.id === imageId));
   };
 
   return (
@@ -21,8 +23,10 @@ const Events = () => {
       <main className="h-fit pt-[88px] max-md:pt-[80px] max-lg:pt-[100px]">
         <div className="px-[7%] flex max-md:flex-col gap-32 bg-main rounded-b-xl shadow-md pb-6">
           <div className="flex w-full gap-6 max-md:flex-col-reverse">
-            <div className="pt-12 w-1/2 text-white min-hh-fit text-right h-fit max-md:w-full">
-              <h1 className="text-2xl">الاسبوع العلمي لجامعة بورسعيد</h1>
+            <div className="pt-12 w-1/2 text-white text-right h-fit max-md:w-full">
+              <h1 className="text-2xl">
+                {(obj && obj.name) || "this is just for testing"}
+              </h1>
               <p>
                 يسر جامعة بورسعيد دعوتكم لحضور أسبوع العلوم، وهو حدث علمي متميز
                 يجمع بين الابتكار، البحث، وامستقبل – لا تفوتوا الفرصة!
