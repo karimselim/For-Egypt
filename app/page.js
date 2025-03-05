@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-// import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import Programs from "./Components/Programs/Programs";
 import Title from "./Components/Title/Title";
@@ -16,7 +15,6 @@ export default function Home() {
   const [playState, setPlayState] = useState(false);
   return (
     <div>
-      {/* <Navbar /> */}
       <Hero />
       <div className="">
         <About setPlayState={setPlayState} />
