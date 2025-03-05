@@ -24,7 +24,7 @@ const ImageSlider = ({ imgs, liWidth, onImageClick }) => {
       ).matches;
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
-      if (isPhone) {
+      if (isPhone && pathname !== "/") {
         setNumForGroups(1);
       } else if (isTablet) {
         setNumForGroups(2);
