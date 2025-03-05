@@ -179,26 +179,6 @@ const Navbar = () => {
           )}
         </li>
 
-        {/* <li className="text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1">
-          {isCollegesPage ? (
-            <Link
-              href="/#colleges"
-              className="block"
-              onClick={() => setMobileMenu(false)}
-            >
-              الكليات
-            </Link>
-          ) : (
-            <Link
-              href="/colleges"
-              className="block"
-              onClick={() => setMobileMenu(false)}
-            >
-              الكليات
-            </Link>
-          )}
-        </li> */}
-
         <li className="text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1">
           {isHomePage ? (
             <ScrollLink
