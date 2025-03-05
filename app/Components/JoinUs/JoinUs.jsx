@@ -51,6 +51,8 @@ const JoinUs = () => {
   });
   const [imageBase64, setImageBase64] = useState(null);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // null, 'success', or 'error'
 
   const validate = () => {
     let isValid = true;
@@ -133,13 +135,16 @@ const JoinUs = () => {
 
     if (!validate()) return;
 
+    setLoading(true);
+    setSubmitStatus(null);
+
     try {
       const querySnapshot = await getDocs(
         query(collection(db, "contacts"), where("id", "==", formValues.id))
       );
 
       if (!querySnapshot.empty) {
-        alert("يوجد مستخدم بالفعل بهذا الرقم القومي.");
+        setLoading(false);
         return;
       }
 
@@ -152,13 +157,15 @@ const JoinUs = () => {
         createdAt: new Date(),
       });
 
-      alert("تم إرسال البيانات بنجاح! Document ID: " + docRef.id);
+      setSubmitStatus("success");
 
-      setFormValues({ name: "", phone: "", id: "" });
+      setFormValues({ name: "", phone: "", id: "", college: "" });
       setImageBase64(null);
     } catch (error) {
       console.error("Error adding document: ", error);
-      alert("حدث خطأ أثناء إرسال البيانات.");
+      setSubmitStatus("error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -182,7 +189,7 @@ const JoinUs = () => {
             <input
               type="file"
               accept="image/*"
-              // required
+              disabled={loading}
               className="w-32 h-32 max-md:w-24 max-md:h-24 absolute z-20 opacity-0 rounded-full cursor-pointer"
               onChange={handleFileChange}
             />
@@ -214,6 +221,7 @@ const JoinUs = () => {
             placeholder="أدخل اسمك الكامل"
             value={formValues.name}
             onChange={handleChange}
+            disabled={loading}
             className="block w-full bg-[#ebecfe] p-4 outline-none mb-3 mt-1 text-right rounded-md"
           />
           {errors.name && <p className="text-red-500">{errors.name}</p>}
@@ -227,6 +235,7 @@ const JoinUs = () => {
             placeholder="أدخل رقم هاتفك"
             value={formValues.phone}
             onChange={handleChange}
+            disabled={loading}
             className="block w-full bg-[#ebecfe] p-4 outline-none mb-3 mt-1 text-right rounded-md"
           />
           {errors.phone && <p className="text-red-500">{errors.phone}</p>}
@@ -240,6 +249,7 @@ const JoinUs = () => {
             placeholder="أدخل الرقم القومي الخاص بك"
             value={formValues.id}
             onChange={handleChange}
+            disabled={loading}
             className="block w-full bg-[#ebecfe] p-4 outline-none mb-1 mt-1 text-right rounded-md"
           />
           {errors.id && <p className="text-red-500">{errors.id}</p>}
@@ -253,6 +263,7 @@ const JoinUs = () => {
             placeholder="أدخل اسم الكلية"
             value={formValues.college}
             onChange={handleChange}
+            disabled={loading}
             className="block w-full bg-[#ebecfe] p-4 outline-none mb-3 mt-1 text-right rounded-md"
           />
           {errors.college && <p className="text-red-500">{errors.college}</p>}
@@ -260,9 +271,17 @@ const JoinUs = () => {
           <Button
             type="submit"
             className="px-6 py-3 !bg-main before:!bg-main mt-4 !text-white"
+            disabled={loading}
           >
-            سجل الآن
+            {loading ? "جاري التحميل..." : "سجل الآن"}
           </Button>
+
+          {submitStatus === "success" && (
+            <p className="text-green-500 mt-4">تم إرسال البيانات بنجاح!</p>
+          )}
+          {submitStatus === "error" && (
+            <p className="text-red-500 mt-4">حدث خطأ أثناء إرسال البيانات.</p>
+          )}
         </form>
       </aside>
     </section>
