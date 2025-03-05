@@ -18,6 +18,7 @@ const Navbar = () => {
   const isNewsPage = pathName === "/news";
   const isEventsPage = pathName === "/events";
   const isCollegesPage = pathName === "/colleges";
+  const iscontactUsPage = pathName === "/contact";
   const sideBarRef = useRef(null);
   const menuIconRef = useRef(null);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -115,6 +116,26 @@ const Navbar = () => {
                 إنضم الينا الآن
               </ScrollLink>
             </Button>
+          )}
+        </li>
+
+        <li className="text-lg hover:text-black transition-colors max-lg:my-[10px] max-lg:mx-2 max-md:block max-md:my-6 max-md:mx-10 duration-300 inline-block mx-4 my-1">
+          {iscontactUsPage ? (
+            <Link
+              href="/"
+              className="block"
+              onClick={() => setMobileMenu(false)}
+            >
+              المقترحات و الشكاوى
+            </Link>
+          ) : (
+            <Link
+              href="/contact"
+              className="block"
+              onClick={() => setMobileMenu(false)}
+            >
+              المقترحات و الشكاوى
+            </Link>
           )}
         </li>
 

@@ -50,10 +50,6 @@ const Contact = () => {
             className="block w-full border p-3 outline-none mb-2 mt-1 text-right rounded-md"
           />
           <label className="block w-full text-right">الرسالة</label>
-          {/* <textarea
-            className="border w-full h-28 outline-none p-3 text-right mt-2"
-            placeholder="... شاركنا ملاحظاتك او إقتراحاتك "
-          /> */}
           <input
             className="border w-full outline-none p-3 text-right mt-2"
             placeholder="... شاركنا ملاحظاتك او إقتراحاتك "
